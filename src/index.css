@@ -1,96 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Psychology Practice Design System - Josué */
 
 @layer base {
   :root {
+    /* Base colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 197 50% 9%;
+    
+    /* Psychology brand colors */
+    --therapy-green: 193 39% 18%;  /* #1C3E40 */
+    --therapy-gold: 40 75% 63%;    /* #F2BE51 */
+    --therapy-white: 0 0% 100%;    /* #FFFFFF */
+    --therapy-ink: 197 29% 8%;     /* #0F1617 */
+    --therapy-muted: 180 20% 94%;  /* #EAF1F1 */
+    --therapy-green-light: 193 39% 28%;
+    --therapy-green-dark: 193 39% 13%;
+    
+    /* Semantic tokens using therapy colors */
+    --primary: 193 39% 18%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 193 39% 28%;
+    
+    --secondary: 40 75% 63%;
+    --secondary-foreground: 197 29% 8%;
+    
+    --accent: 40 75% 63%;
+    --accent-foreground: 197 29% 8%;
+    
+    --muted: 180 20% 94%;
+    --muted-foreground: 197 20% 45%;
+    
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --card-foreground: 197 50% 9%;
+    
+    --border: 180 15% 88%;
+    --input: 180 15% 88%;
+    --ring: 193 39% 18%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(180deg, hsl(193 39% 22%) 0%, hsl(var(--therapy-green)) 40%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100% / 0.04), hsl(0 0% 100% / 0.02));
+    --gradient-accent: radial-gradient(1200px 420px at 10% 0%, hsl(0 0% 100% / 0.06), transparent 60%);
+    
+    /* Shadows */
+    --shadow-glow: 0 20px 60px hsl(0 0% 0% / 0.35), 0 0 0 1px hsl(var(--therapy-gold) / 0.18) inset;
+    --shadow-card: 0 10px 30px hsl(var(--therapy-green) / 0.08);
+    --shadow-float: 0 10px 24px hsl(var(--therapy-gold) / 0.24);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-reveal: opacity 0.6s ease, transform 0.6s ease;
+    
+    --radius: 1.25rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 193 39% 8%;
+    --foreground: 0 0% 100%;
+    --muted: 193 39% 13%;
+    --muted-foreground: 180 10% 65%;
+    --card: 193 39% 13%;
+    --card-foreground: 0 0% 100%;
   }
 }
 
@@ -100,6 +75,93 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-['Poppins',system-ui,sans-serif];
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-['Playfair_Display',serif];
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Reveal animation for scroll-triggered elements */
+  .reveal-hidden {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: var(--transition-reveal);
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Therapy-specific components */
+  .hero-background {
+    background: var(--gradient-hero), var(--gradient-accent);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-background::after {
+    content: "";
+    position: absolute;
+    inset: auto -20% 0 -20%;
+    height: 150px;
+    z-index: -1;
+    background: linear-gradient(0deg, hsl(0 0% 100% / 0) 0%, hsl(var(--therapy-gold) / 0.15) 100%);
+    filter: blur(18px);
+  }
+
+  .card-therapy {
+    @apply border border-accent/25 rounded-3xl p-5;
+    background: var(--gradient-card);
+  }
+
+  .card-therapy-white {
+    @apply bg-white border border-primary/10 rounded-3xl p-5;
+    box-shadow: var(--shadow-card);
+  }
+
+  .eyebrow {
+    @apply inline-block text-sm tracking-widest uppercase opacity-90 border border-accent/45 rounded-full px-3 py-1.5;
+    background: hsl(var(--therapy-gold) / 0.08);
+  }
+
+  .portrait-hero {
+    @apply w-full aspect-[4/5] rounded-3xl object-cover block;
+    box-shadow: var(--shadow-glow);
+    background: linear-gradient(120deg, hsl(var(--therapy-gold) / 0.10), hsl(0 0% 100% / 0.06));
+  }
+
+  .therapy-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: saturate(150%) blur(6px);
+    background: hsl(var(--therapy-green) / 0.72);
+    border-bottom: 1px solid hsl(var(--therapy-gold) / 0.15);
+  }
+
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, hsl(var(--therapy-gold) / 0) 0%, hsl(var(--therapy-gold) / 0.35) 50%, hsl(var(--therapy-gold) / 0) 100%);
+    margin: 0.5rem 0 0;
+  }
+
+  .wa-float {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 60;
+  }
+
+  .wa-float .btn {
+    box-shadow: var(--shadow-float);
   }
 }
