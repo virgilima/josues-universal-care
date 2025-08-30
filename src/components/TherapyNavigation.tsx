@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import logoJosue from "@/assets/logo-josue.png";
+import logoJosue from "@/assets/logo-josue-victor.png";
 
 const TherapyNavigation = () => {
   const scrollToSection = (id: string) => {
@@ -23,10 +23,9 @@ const TherapyNavigation = () => {
           >
             <img 
               src={logoJosue} 
-              alt="Logotipo Josué Psicologia" 
-              className="h-10 w-auto block"
+              alt="Logotipo Josué Victor Psicologia" 
+              className="h-12 w-auto block"
             />
-            <span className="font-semibold tracking-wide">Josué Psicologia</span>
           </a>
           
           <div className="hidden md:flex items-center">
