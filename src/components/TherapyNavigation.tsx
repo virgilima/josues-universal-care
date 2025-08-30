@@ -21,11 +21,6 @@ const TherapyNavigation = () => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           >
-            <img 
-              src={logoJosue} 
-              alt="Logotipo Josué Victor Psicologia" 
-              className="h-16 w-auto block"
-            />
           </a>
           
           <div className="hidden md:flex items-center">
