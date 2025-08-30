@@ -14,7 +14,7 @@ import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-therapy-green-dark via-therapy-green to-therapy-green-light">
       <TherapyNavigation />
       <main id="top">
         <HeroSection />
