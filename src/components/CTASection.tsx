@@ -24,7 +24,7 @@ const CTASection = () => {
             size="therapy"
             onClick={() => window.open('https://wa.me/5531999999999?text=Olá%2C%20Josué%2C%20quero%20agendar%20uma%20sessão.', '_blank')}
           >
-            💬 Agendar minha sessão agora
+            💬 Primeira sessão por metade do valor habitual - Quero agendar minha primeira sessão
           </Button>
         </div>
       </div>

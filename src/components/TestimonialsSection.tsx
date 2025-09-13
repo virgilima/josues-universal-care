@@ -1,20 +1,36 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRevealAnimation } from "@/hooks/useRevealAnimation";
 
 const testimonials = [
   {
-    text: "O Josué me ajudou a lidar com a ansiedade de um jeito que eu nunca tinha experimentado. Sinto-me mais estável e confiante.",
-    author: "R. A."
+    text: "Excelente escolha, abordagem personalizada, profissional confiável.",
+    author: "Edson Lucena"
   },
   {
-    text: "Me senti acolhida desde a primeira sessão. A conversa foi um divisor de águas para mim.",
-    author: "M. S."
+    text: "Josué Victor é um psicólogo excepcional. Sua competência é evidente em sua abordagem cuidadosa durante os atendimentos, criando um ambiente seguro para a exploração emocional. Sua empatia e habilidades terapêuticas são notáveis, contribuindo significativamente para meu autoconhecimento e desenvolvimento emocional. Recomendo seus serviços a quem busca uma abordagem profissional e acolhedora para o bem-estar psicológico.",
+    author: "Vitório Pereira"
   },
   {
-    text: "A abordagem universalista é diferente de tudo que já conheci. Simples, respeitosa e eficaz.",
-    author: "C. P."
+    text: "Excelente no que faz. Foram ótimas sessões e me ajudou bastante quando precisei, super atencioso.",
+    author: "Wendy Gabriela"
+  },
+  {
+    text: "Me identifiquei de primeira. Tem uma forma de atender muito acertiva, zelosa e com bastante troca. Sempre saio com uma certeza de que valeu a pena o escolher como psicólogo. Tem sido um tempo muito bom 😊",
+    author: "Maycon Gustavo"
+  },
+  {
+    text: "Um excelente profissional! Atencioso, cuidadoso nas observações, faz ponderações muito pertinentes. Tenho mais de um ano em atendimento e só tenho a agradecer pelo comprometimento, paciência e acolhimento. Muito obrigada pelo trabalho desenvolvido até aqui, você arrasa!!!",
+    author: "Rosana Santos"
+  },
+  {
+    text: "Ótimo profissional, têm me ajudado a recalcular minhas rotas de maneira gentil e muito acolhedora, recomendo!",
+    author: "Rafaela Assis"
+  },
+  {
+    text: "O Josué é o melhor terapeuta que já tive, fiz o maior progresso, me fez enxergar coisas que n enxerguei com mais nenhum. Um profissional que n utiliza rótulos e assim te faz enxergar que cada experiência sua vida é única, assim como as reações!",
+    author: "Lucas Diogo"
   }
 ];
 
@@ -54,6 +70,11 @@ const TestimonialsSection = () => {
           >
             {testimonials.map((testimonial, index) => (
               <article key={index} className="min-w-full p-8">
+                <div className="flex gap-1 mb-3">
+                  {[...Array(5)].map((_, starIndex) => (
+                    <Star key={starIndex} className="w-5 h-5 fill-accent text-accent" />
+                  ))}
+                </div>
                 <p className="text-lg md:text-xl mb-3">"{testimonial.text}"</p>
                 <div className="text-accent font-semibold opacity-85">
                   — {testimonial.author}
