@@ -36,7 +36,7 @@ const HeroSection = () => {
                 size="therapy"
                 onClick={() => window.open('https://wa.me/5531999999999?text=Olá%2C%20Josué%2C%20quero%20agendar%20uma%20sessão.', '_blank')}
               >
-                💬 Primeira sessão de acolhimento por valor reduzido / metade do valor habitual
+                💬 Agendar sessão de acolhimento
               </Button>
               <Button 
                 variant="ghost-therapy" 
