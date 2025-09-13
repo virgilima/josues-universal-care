@@ -25,11 +25,10 @@ const HeroSection = () => {
               Atendimento 100% online • CRP 04/69208
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mt-3 mb-4">
-              Psicologia Universalista: terapia sem rótulos, feita para a sua vida real.
+              Psicólogo Online • Terapia Integrativa
             </h1>
             <p className="text-lg md:text-xl opacity-95 max-w-prose mb-6">
-              Acolhimento, ciência e resultados práticos para ansiedade, depressão, autoestima, 
-              relações humanas e travas financeiras. Comece pela primeira sessão de acolhimento.
+              Escuta profunda, técnicas integradas e resultados aplicáveis na sua vida real.
             </p>
             <div className="flex flex-wrap gap-3 mb-4">
               <Button 
@@ -37,14 +36,14 @@ const HeroSection = () => {
                 size="therapy"
                 onClick={() => window.open('https://wa.me/5531999999999?text=Olá%2C%20Josué%2C%20quero%20agendar%20uma%20sessão.', '_blank')}
               >
-                💬 Agendar sessão pelo WhatsApp
+                💬 Agendar sessão de acolhimento
               </Button>
               <Button 
                 variant="ghost-therapy" 
                 size="therapy"
-                onClick={() => scrollToSection('universalista')}
+                onClick={() => window.open('https://wa.me/5531999999999?text=Olá%2C%20Josué%2C%20quero%20falar%20sobre%20terapia.', '_blank')}
               >
-                Como funciona
+                💬 Falar no WhatsApp
               </Button>
             </div>
             <div className="text-white/90">
