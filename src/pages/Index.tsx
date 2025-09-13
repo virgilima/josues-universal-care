@@ -49,7 +49,7 @@ const Index = () => {
             },
             "availableChannel": {
               "@type": "ServiceChannel",
-              "serviceUrl": "https://wa.me/5531999999999"
+              "serviceUrl": "https://wa.me/5531985961903"
             }
           })
         }}
