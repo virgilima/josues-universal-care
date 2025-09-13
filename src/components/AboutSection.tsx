@@ -53,7 +53,7 @@ const AboutSection = () => {
           >
             <div className="card-therapy-white">
               <div className="inline-flex items-center gap-2 text-sm px-3 py-1.5 rounded-full border border-accent/35 bg-accent/8 mb-3">
-                ✔️ Primeira sessão de acolhimento
+                ✔️ Primeira sessão de acolhimento por valor reduzido / metade do valor habitual
               </div>
               <h3 className="text-xl font-semibold mb-2 mt-3">
                 Como é a primeira conversa?
