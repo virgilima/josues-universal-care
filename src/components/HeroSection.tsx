@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useRevealAnimation } from "@/hooks/useRevealAnimation";
-import portraitHero from "@/assets/portrait-hero.jpg";
+import portraitHero from "@/assets/portrait-hero-new.jpg";
 
 const HeroSection = () => {
   const { ref: leftRef, isVisible: leftVisible } = useRevealAnimation();
