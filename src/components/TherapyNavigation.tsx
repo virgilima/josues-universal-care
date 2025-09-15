@@ -31,12 +31,6 @@ const TherapyNavigation = () => {
               Sobre
             </button>
             <button
-              onClick={() => scrollToSection('universalista')}
-              className="text-white opacity-90 hover:opacity-100 ml-5 font-medium transition-opacity"
-            >
-              Universalista
-            </button>
-            <button
               onClick={() => scrollToSection('diferenciais')}
               className="text-white opacity-90 hover:opacity-100 ml-5 font-medium transition-opacity"
             >
