@@ -29,7 +29,7 @@ const AboutSection = () => {
               Sou <strong>Josué Victor de Sousa Santos</strong> (<strong>CRP 04/69208</strong>). 
               Psicólogo clínico pós-graduado em Psicologia Clínica, Psicologia Organizacional e 
               Psicologia Escolar. Minha missão é oferecer uma escuta acolhedora e ética, utilizando 
-              uma abordagem única: a <strong>Psicologia Universalista</strong>. Com ela, integro 
+              uma abordagem única: a <strong>Psicologia Integrativa</strong>. Com ela, integro 
               técnicas de diferentes linhas (psicanálise, TCC, humanista, entre outras) às{' '}
               <em>suas</em> necessidades, para que a terapia se adapte a você — e não o contrário.
             </p>
