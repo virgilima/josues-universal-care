@@ -28,7 +28,7 @@ const HeroSection = () => {
               Psicólogo Online • Terapia Integrativa
             </h1>
             <p className="text-lg md:text-xl opacity-95 max-w-prose mb-6">
-              Escuta profunda, técnicas integradas e resultados aplicáveis na sua vida real.
+              Escuta profunda, técnicas integradas aplicáveis na sua vida real.
             </p>
             <div className="flex flex-wrap gap-3 mb-4">
               <Button 
