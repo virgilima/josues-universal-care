@@ -22,9 +22,11 @@ const CTASection = () => {
           <Button 
             variant="whatsapp" 
             size="therapy"
+            className="text-sm md:text-base px-4 py-3 md:px-6 md:py-4 max-w-full"
             onClick={() => window.open('https://wa.me/5531985961903', '_blank')}
           >
-            💬 Primeira sessão por metade do valor habitual - Quero agendar minha primeira sessão
+            <span className="block md:hidden">💬 Agendar primeira sessão</span>
+            <span className="hidden md:block">💬 Primeira sessão por metade do valor habitual - Quero agendar minha primeira sessão</span>
           </Button>
         </div>
       </div>
